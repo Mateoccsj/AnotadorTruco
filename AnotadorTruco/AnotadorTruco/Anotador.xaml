@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnotadorTruco.Anotador"
+             BackgroundImage="FondoMadera.jpg">
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="100" />
+        <RowDefinition Height="1" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition  Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Label VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+               Text="-" TextColor="Gold" BackgroundColor="Gold" Grid.Column="1" Grid.Row="1" />
+        <Label BackgroundColor="Black" Grid.Row="0" Grid.Column="0" Text="Nos" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="25" TextColor="White" />
+        <Label BackgroundColor="White" Grid.Row="0" Grid.Column="2" Text="Ellos" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="25" TextColor="Black" />
+        <Label x:Name="_rotatingLabel"
+               Grid.Row="3" Grid.Column="0"
+               Text="."
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <Stepper Grid.Row="2" Grid.Column="0"
+                 
+                 Minimum="0"
+                 Maximum="50"
+                 Increment="1"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 ValueChanged="OnStepperValueChanged" />
+        <Label x:Name="ContadorEquipo1"
+               Grid.Row="1" Grid.Column="0"
+               TextColor="Black"                           
+               FontSize="80"
+               Text="-" 
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <Label x:Name="_rotatingLabel2"
+               Grid.Row="3" Grid.Column="2"
+               Text="."
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <Stepper Grid.Row="2" Grid.Column="2"
+                 
+                 Minimum="0"
+                 Maximum="50"
+                 Increment="1"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 ValueChanged="OnStepperValueChanged2" />
+        <Label x:Name="ContadorEquipo2"
+               Grid.Row="1" Grid.Column="2"
+               TextColor="White"
+               FontSize="80"
+               Text="-"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+    </Grid>
+
+</ContentPage>

@@ -2,13 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AnotadorTruco"
-             x:Class="AnotadorTruco.MainPage">
+             x:Class="AnotadorTruco.MainPage"
+             BackgroundImage="FondoMadera.jpg">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        
+        <Grid >
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="ANOTADOR DE TRUCO" FontSize="35" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                TextColor="Blue" Grid.Row="0"/>
+
+        <Image Source="Cartas2.png" Aspect="AspectFit" Grid.Row="1"/>
+
+        <Button VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="btnAvanzar"
+                BackgroundColor="Blue" TextColor="White" Text=" Avanzar" Grid.Row="3"/>
+
+    </Grid>
 
 </ContentPage>

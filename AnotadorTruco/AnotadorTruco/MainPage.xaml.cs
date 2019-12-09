@@ -12,6 +12,19 @@ namespace AnotadorTruco
         public MainPage()
         {
             InitializeComponent();
+            
+            btnAvanzar.Clicked += (sender,e) =>
+           {
+
+               Navigation.PushAsync(new Anotador());
+           };
         }
+
+       /* private async void BtnAvanzar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Anotador(Convert.ToString(lblEquipo1), Convert.ToString(lblEquipo2)));
+        }*/
+
+
     }
 }
