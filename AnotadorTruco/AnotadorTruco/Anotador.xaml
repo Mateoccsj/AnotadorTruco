@@ -19,21 +19,22 @@
             <ColumnDefinition  Width="*" />
         </Grid.ColumnDefinitions>
         
-        <Label VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+        <Label VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
                Text="-" TextColor="Gold" BackgroundColor="Gold" Grid.Column="1" Grid.Row="1" />
-        <Label BackgroundColor="Black" Grid.Row="0" Grid.Column="0" Text="Nos" 
-               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="25" TextColor="White" />
-        <Label BackgroundColor="White" Grid.Row="0" Grid.Column="2" Text="Ellos" 
-               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="25" TextColor="Black" />
+        <Entry BackgroundColor="Black" Grid.Row="0" Grid.Column="0" Text="Nos" x:Name="labelEquipoNegro"
+               HorizontalTextAlignment="Center" FontSize="25" TextColor="White" MaxLength="8" />
+        <Entry BackgroundColor="White" Grid.Row="0" Grid.Column="2" Text="Ellos" x:Name="labelEquipoBlanco"
+               HorizontalTextAlignment="Center" FontSize="25" PlaceholderColor="White" TextColor="Black" MaxLength="8" />
+
         <Label x:Name="_rotatingLabel"
                Grid.Row="3" Grid.Column="0"
                Text="."
                FontSize="Large"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
-        <Stepper Grid.Row="2" Grid.Column="0"
-                 
-                 Minimum="0"
+        
+        <Stepper Grid.Row="2" Grid.Column="0"                
+                 Minimum="0"                 
                  Maximum="50"
                  Increment="1"
                  HorizontalOptions="Center"
@@ -46,14 +47,16 @@
                Text="-" 
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
+        
+        
         <Label x:Name="_rotatingLabel2"
                Grid.Row="3" Grid.Column="2"
                Text="."
                FontSize="Large"
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
-        <Stepper Grid.Row="2" Grid.Column="2"
-                 
+        
+        <Stepper Grid.Row="2" Grid.Column="2"                 
                  Minimum="0"
                  Maximum="50"
                  Increment="1"
