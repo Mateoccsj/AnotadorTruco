@@ -21,27 +21,24 @@ namespace AnotadorTruco
 		}
 
 
-        void OnStepperValueChanged(object sender, ValueChangedEventArgs e, Entry labelEquipoNegro)
+        void OnStepperValueChanged(object sender, ValueChangedEventArgs e)
         {
             double value = e.NewValue;
             _rotatingLabel.Rotation = value;
            // _rotatingLabel2.Rotation = value;
             ContadorEquipo1.Text = string.Format("{0}", value);
-            if(value == 18)
-            {
-                DisplayAlert("Ganador",Convert.ToString(labelEquipoNegro), "Continuar");
-            }
+            if (value == 18)
+                DisplayAlert("Ganador", labelEquipoNegro.Text, "Continuar");
+
         }
 
-        void OnStepperValueChanged2(object sender, ValueChangedEventArgs e,Entry labelEquipoBlanco)
+        void OnStepperValueChanged2(object sender, ValueChangedEventArgs e)
         {
             double value2 = e.NewValue;
             _rotatingLabel2.Rotation = value2;
             ContadorEquipo2.Text = string.Format("{0}", value2);
             if (value2 == 18)
-            {
-                DisplayAlert("Ganador", Convert.ToString(labelEquipoBlanco), "Continuar");
-            }
+               DisplayAlert("Ganador", labelEquipoBlanco.Text, "Continuar");
         }
 
         
